@@ -1,0 +1,192 @@
+FRONTEND INTERVYU AMALIY TOPSHIRIQLARI — YECHIMLAR
+====================================================
+
+1. Massivni teskari aylantirish (reverse() siz)
+------------------------------------------------
+function reverseArray(arr) {
+  const result = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    result.push(arr[i]);
+  }
+  return result;
+}
+
+console.log(reverseArray([1, 2, 3, 4, 5])); // [5, 4, 3, 2, 1]
+
+
+2. Eng katta sonni topish
+--------------------------
+function findMax(arr) {
+  let max = arr[0];
+  for (let num of arr) {
+    if (num > max) max = num;
+  }
+  return max;
+}
+
+console.log(findMax([3, 9, 1, 12, 5])); // 12
+
+
+3. Eng kichik sonni topish
+----------------------------
+function findMin(arr) {
+  let min = arr[0];
+  for (let num of arr) {
+    if (num < min) min = num;
+  }
+  return min;
+}
+
+console.log(findMin([3, 9, 1, 12, 5])); // 1
+
+
+4. Ikkinchi eng katta son
+---------------------------
+function secondLargest(arr) {
+  const sorted = [...arr].sort((a, b) => b - a);
+  return sorted[1];
+}
+
+console.log(secondLargest([10, 5, 8, 20, 15])); // 15
+
+
+5. Takrorlanuvchi elementlarni olib tashlash
+-----------------------------------------------
+function removeDuplicates(arr) {
+  return [...new Set(arr)];
+}
+
+console.log(removeDuplicates([1, 2, 2, 3, 3, 4])); // [1, 2, 3, 4]
+
+
+6. Ikki massivni birlashtirish
+---------------------------------
+function mergeArrays(arr1, arr2) {
+  return [...arr1, ...arr2];
+}
+
+console.log(mergeArrays([1, 2, 3], [4, 5, 6])); // [1, 2, 3, 4, 5, 6]
+
+
+7. Yetishmayotgan sonni topish
+---------------------------------
+function findMissingNumber(arr) {
+  const n = arr.length + 1;
+  const expectedSum = (n * (n + 1)) / 2;
+  const actualSum = arr.reduce((sum, num) => sum + num, 0);
+  return expectedSum - actualSum;
+}
+
+console.log(findMissingNumber([1, 2, 3, 5])); // 4
+
+
+8. Matnni teskari yozish
+---------------------------
+function reverseString(str) {
+  let result = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    result += str[i];
+  }
+  return result;
+}
+
+console.log(reverseString("hello")); // "olleh"
+
+
+9. Palindromni tekshirish
+----------------------------
+function isPalindrome(str) {
+  const reversed = str.split("").reverse().join("");
+  return str === reversed;
+}
+
+console.log(isPalindrome("level")); // true
+
+
+10. Unli harflarni sanash
+----------------------------
+function countVowels(str) {
+  const vowels = "aeiouAEIOU";
+  let count = 0;
+  for (let char of str) {
+    if (vowels.includes(char)) count++;
+  }
+  return count;
+}
+
+console.log(countVowels("JavaScript")); // 3
+
+
+11. So'zlar sonini sanash
+----------------------------
+function countWords(sentence) {
+  return sentence.trim().split(/\s+/).length;
+}
+
+console.log(countWords("I love JavaScript")); // 3
+
+
+12. Birinchi harfni katta qilish
+-----------------------------------
+function capitalizeFirst(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+console.log(capitalizeFirst("frontend developer")); // "Frontend developer"
+
+
+13. FizzBuzz
+---------------
+for (let i = 1; i <= 20; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log("FizzBuzz");
+  } else if (i % 3 === 0) {
+    console.log("Fizz");
+  } else if (i % 5 === 0) {
+    console.log("Buzz");
+  } else {
+    console.log(i);
+  }
+}
+
+
+14. map()
+------------
+const doubled = [1, 2, 3, 4].map((num) => num * 2);
+console.log(doubled); // [2, 4, 6, 8]
+
+
+15. filter()
+----------------
+const evens = [1, 2, 3, 4, 5, 6].filter((num) => num % 2 === 0);
+console.log(evens); // [2, 4, 6]
+
+
+16. reduce()
+----------------
+const sum = [1, 2, 3, 4].reduce((total, num) => total + num, 0);
+console.log(sum); // 10
+
+
+17. some()
+--------------
+const hasOdd = [2, 4, 7, 8].some((num) => num % 2 !== 0);
+console.log(hasOdd); // true
+
+
+18. every()
+---------------
+const allEven = [2, 4, 6, 8].every((num) => num % 2 === 0);
+console.log(allEven); // true
+
+
+19. find()
+--------------
+const firstBig = [4, 8, 11, 15].find((num) => num > 10);
+console.log(firstBig); // 11
+
+
+20. findIndex()
+-------------------
+const firstBigIndex = [4, 8, 11, 15].findIndex((num) => num > 10);
+console.log(firstBigIndex); // 2
