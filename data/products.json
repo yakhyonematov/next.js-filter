@@ -1,12 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "iPhone 16",
-    "price": 1200,
-    "category": "Phone",
-    "emoji": "📱"
-  },
-  {
     "id": 2,
     "name": "Samsung Galaxy S24",
     "price": 999,
